@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="online_icon_size">14dp</dimen>
+    <dimen name="size32">32dp</dimen>
+    <dimen name="size8">8dp</dimen>
+    <dimen name="size124">124dp</dimen>
+    <dimen name="size24">24dp</dimen>
+</resources>

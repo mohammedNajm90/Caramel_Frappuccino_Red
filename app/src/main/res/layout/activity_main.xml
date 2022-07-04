@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/coffee_background"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:alpha="0.1"
+        android:scaleType="fitXY"
+        android:src="@drawable/coffee_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="@dimen/margin40"
+        android:layout_height="@dimen/size24"
+        android:layout_margin="@dimen/margin16"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/shopping_basket"
+        android:layout_width="@dimen/margin40"
+        android:layout_height="0dp"
+        android:layout_marginLeft="64dp"
+        android:src="@drawable/ic_baseline_point_of_sale_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/details_Add"
+        app:layout_constraintTop_toTopOf="@id/arrow_back" />
+    <ImageView
+        android:id="@+id/online_con"
+        android:layout_width="@dimen/online_icon_size"
+        android:layout_height="@dimen/online_icon_size"
+        android:src="@drawable/circle_bg"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="@id/shopping_basket"
+        app:layout_constraintTop_toTopOf="@id/shopping_basket" />
+
+    <TextView
+        android:id="@+id/details_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size32"
+        android:fontFamily="Poppins"
+        android:text="Details"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/shopping_basket"
+        app:layout_constraintStart_toEndOf="@id/arrow_back"
+        app:layout_constraintTop_toTopOf="@id/arrow_back" />
+
+    <ImageView
+        android:id="@+id/circle_green_bg"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="106dp"
+        android:elevation="64dp"
+        android:src="@drawable/circle_bg"
+        app:layout_constraintEnd_toStartOf="@id/shopping_basket"
+        app:layout_constraintStart_toEndOf="@id/arrow_back"
+        app:layout_constraintTop_toBottomOf="@id/arrow_back" />
+
+    <ImageView
+        android:id="@+id/coffee_cup"
+        android:layout_width="240dp"
+        android:layout_height="340dp"
+        android:scaleType="fitXY"
+        android:elevation="64dp"
+        android:src="@drawable/coffee_cup"
+        app:layout_constraintEnd_toStartOf="@id/shopping_basket"
+        app:layout_constraintStart_toEndOf="@id/arrow_back"
+        app:layout_constraintTop_toTopOf="@id/arrow_back" />
+
+    <TextView
+        android:id="@+id/item_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="Poppins"
+        android:text="Caramel \nFrappuccino"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@id/arrow_back"
+        app:layout_constraintTop_toBottomOf="@id/coffee_background" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="Poppins"
+        android:text="$30.00"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="900"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffee_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        android:fontFamily="Poppins"
+        android:text="Best Sales"
+        android:textColor="@color/black"
+        android:textFontWeight="900"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/price"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+    <TextView
+        android:id="@+id/size_Option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        android:fontFamily="Poppins"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Size Options"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/arrow_back"
+        app:layout_constraintTop_toBottomOf="@id/item_Name" />
+
+    <ImageView
+        android:id="@+id/Tall_Cup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/circle_gray_bg"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/arrow_back"
+        app:layout_constraintTop_toBottomOf="@id/size_Option"/>
+    <ImageView
+        android:id="@+id/Venti_Cup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/circle_gray_bg"
+        app:layout_constraintStart_toEndOf="@id/Tall_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall_Cup"/>
+
+
+
+    <ImageView
+        android:id="@+id/Grand_Cup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/circle_bg"
+        android:elevation="1dp"
+        app:layout_constraintStart_toEndOf="@id/Venti_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall_Cup"
+        />
+
+    <ImageView
+        android:id="@+id/Custom_Cup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/circle_gray_bg"
+        app:layout_constraintStart_toEndOf="@id/Grand_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall_Cup"
+         />
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="@dimen/margin40"
+        app:layout_constraintStart_toStartOf="@id/Tall_Cup"
+        app:layout_constraintBottom_toBottomOf="@id/Tall_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Tall_Cup"
+        android:src="@drawable/ic_cup"
+        android:elevation="1dp"
+        />
+    <ImageView
+        android:layout_width="@dimen/size124"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@id/Venti_Cup"
+        app:layout_constraintBottom_toBottomOf="@id/Venti_Cup"
+        app:layout_constraintTop_toTopOf="@id/Venti_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Venti_Cup"
+        android:src="@drawable/ic_cup"
+        android:elevation="1dp"
+        />
+    <ImageView
+        android:layout_width="@dimen/size124"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="@id/Grand_Cup"
+        app:layout_constraintBottom_toBottomOf="@id/Grand_Cup"
+        app:layout_constraintTop_toTopOf="@id/Grand_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Grand_Cup"
+        android:src="@drawable/ic_cup_white"
+        android:elevation="1dp"
+        />
+    <ImageView
+        android:layout_width="@dimen/size124"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="@id/Custom_Cup"
+        app:layout_constraintBottom_toBottomOf="@id/Custom_Cup"
+        app:layout_constraintTop_toTopOf="@id/Custom_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Custom_Cup"
+        android:src="@drawable/ic_cup"
+        android:elevation="1dp"
+        />
+    <TextView
+        android:id="@+id/Tall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Tall_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Tall_Cup"
+        app:layout_constraintTop_toBottomOf="@id/Tall_Cup"
+        android:layout_marginTop="@dimen/size8"
+        android:text="Tall"
+        android:textFontWeight="700"
+        android:elevation="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Tall"
+        app:layout_constraintEnd_toEndOf="@id/Tall"
+        app:layout_constraintTop_toBottomOf="@id/Tall"
+        android:text="12 FJ Oz"
+        android:alpha="0.3"
+        android:textColor="@color/black"
+        android:textSize="8sp"/>
+    <TextView
+        android:id="@+id/Venti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/Venti_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Venti_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall"
+        android:text="Venti"
+        android:textFontWeight="700"
+        android:elevation="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Venti"
+        app:layout_constraintEnd_toEndOf="@id/Venti"
+        app:layout_constraintTop_toBottomOf="@id/Venti"
+        android:text="16 FJ Oz"
+        android:alpha="0.3"
+        android:textColor="@color/black"
+        android:textSize="8sp"/>
+    <TextView
+        android:id="@+id/Grand"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="@id/Grand_Cup"
+    app:layout_constraintEnd_toEndOf="@id/Grand_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall"
+    android:text="Grand"
+    android:textFontWeight="700"
+    android:elevation="16dp"
+    android:textColor="@color/black"
+    android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Grand"
+        app:layout_constraintEnd_toEndOf="@id/Grand"
+        app:layout_constraintTop_toBottomOf="@id/Grand"
+        android:text="24 FJ Oz"
+        android:alpha="0.3"
+        android:textColor="@color/black"
+        android:textSize="8sp"/>
+    <TextView
+        android:id="@+id/Custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Custom_Cup"
+        app:layout_constraintEnd_toEndOf="@id/Custom_Cup"
+        app:layout_constraintTop_toTopOf="@id/Tall"
+        android:text="Custom"
+        android:textFontWeight="700"
+        android:elevation="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Custom"
+        app:layout_constraintEnd_toEndOf="@id/Custom"
+        app:layout_constraintTop_toBottomOf="@id/Custom"
+        android:text="__FJ Oz"
+        android:alpha="0.3"
+        android:textColor="@color/black"
+        android:textSize="8sp"/>
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="@dimen/size32"
+        android:layout_height="@dimen/size32"
+        app:layout_constraintStart_toStartOf="@id/Tall_Cup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/circle_bg"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/minus"
+        app:layout_constraintTop_toTopOf="@id/minus"
+        app:layout_constraintEnd_toEndOf="@id/minus"
+        app:layout_constraintBottom_toBottomOf="@id/minus"
+        android:elevation="@dimen/size8"
+        android:gravity="center"
+        android:text="-"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/item_Num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/minus"
+        app:layout_constraintTop_toTopOf="@id/minus"
+        app:layout_constraintBottom_toBottomOf="@id/minus"
+        android:layout_marginStart="@dimen/size8"
+        android:gravity="center"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="@dimen/size32"
+        android:layout_height="@dimen/size32"
+        android:layout_marginStart="@dimen/size24"
+        app:layout_constraintStart_toStartOf="@id/item_Num"
+        app:layout_constraintBottom_toBottomOf="@id/minus"
+        android:background="@drawable/circle_bg"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/plus"
+        app:layout_constraintTop_toTopOf="@id/plus"
+        app:layout_constraintEnd_toEndOf="@id/plus"
+        app:layout_constraintBottom_toBottomOf="@id/plus"
+        android:elevation="@dimen/size8"
+        android:gravity="center"
+        android:text="+"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="256dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="@id/Custom_Cup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/radius_button"
+        android:elevation="@dimen/size8"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Add to Order"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
